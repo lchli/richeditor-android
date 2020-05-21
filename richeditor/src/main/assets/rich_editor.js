@@ -32,11 +32,11 @@ RE.callback = function() {
 }
 
 RE.setHtml = function(contents) {
-    RE.editor.innerHTML = decodeURIComponent(contents.replace(/\+/g, '%20'));
+    $( "#editor" ).html( decodeURIComponent(contents.replace(/\+/g, '%20')) );
 }
 
 RE.getHtml = function() {
-    return RE.editor.innerHTML;
+    return $( "#editor" ).html();
 }
 
 RE.getText = function() {
